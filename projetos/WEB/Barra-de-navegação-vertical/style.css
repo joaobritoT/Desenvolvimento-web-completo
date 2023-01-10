@@ -1,0 +1,39 @@
+/*ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+
+    padding:5px 20px ;
+    background: url(imagens/seta.png) no-repeat left center;
+}*/
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+}
+
+ul a{
+    width: 200px;
+    height: 40px;
+    display: block;
+    background: url(imagens/menu.png) no-repeat left bottom;
+    transition: 0.2s ease-in;
+    color: black;
+    text-indent: 40px;
+    text-decoration: none;
+    line-height: 40px;
+
+}
+
+ul a:hover{
+    width: 200px;
+    height: 40px;
+    display: block;
+    background: url(imagens/menu.png) no-repeat right bottom;
+    color: white;
+}
