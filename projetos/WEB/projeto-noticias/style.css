@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(imagens/fundo.png) repeat-x;
+}
+
+#container{
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+header{
+    width: 720px;
+    text-align: center;
+    
+}
+
+#topo{
+    height: 150px;
+    width: 95%;
+    background: url(imagens/detalhe-topo.png) no-repeat right top;
+}
+
+.logo{
+    background: url(imagens/logo.png) no-repeat left top;
+    width: 152px;
+    height: 66px;
+    text-indent: 300px;
+}
+
+.barra-navegacao{
+    background-color: rgb(233, 3, 53);
+    padding: 8px;
+    width: 78%;
+    margin-top: 22px;
+    text-align: center;
+    color: white;
+}
+
+.navegacao{
+    display: inline-block;
+    margin: 10px;
+    margin-left: 30px;
+    cursor: pointer;
+    font-family: "Trebuchet MS";
+    font-size: large;
+}
+.navegacao:hover{
+    font-weight: bolder;
+    transition: 0.3s;
+}
+
+
+#conteudo{
+    margin-top: 90px;
+}
+
+#tres-colunas #primario{
+    width: 270px;
+    float: left;
+    background-color: blue;
+    margin:  0 0 20px 195px;
+}
+
+#daus-colunas #primario{
+    width: 555px;
+}
+
+#uma-coluna #primario{
+    width: 750px;
+    margin:  0 0 20px 0px;
+}
+
+#lateral-entrevistas{
+    width: 180px;
+    float: left;
+    margin:  0 0 25px 750px;
+}
+
+#secundario{
+    width: 270px;
+    float: left;
+    background: green;
+}
+
+#rodape{
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+#container-rodape{
+    background: #294c71;
+    padding: 20px;
+}
+.titulo-lateral{
+    background-color: #294c71;
+    padding: 3px;
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.nomes{
+    list-style: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.lista-lateral{
+    background-color: rgb(248, 247, 247);
+    font-family: "Trebuchet MS";
+}
+
+.nomes:hover{
+    text-decoration: underline;
+    transition: .3s;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.caixa{
+    background: #f3f3f3
+}
+

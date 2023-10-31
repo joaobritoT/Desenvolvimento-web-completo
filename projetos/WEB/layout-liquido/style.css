@@ -4,17 +4,20 @@ body{
 }
 
 #container{
-    width: 85%;
+    width: 960px;
     margin: 0 auto;
-    background: #fff;
+    background: #fff url(imagens/coluna.png) repeat-y left top;
+    min-width: 720px;
+    max-width: 1280px;
+    border: 1px solid red;
 }
 
 #marca{
     width: 100%;
-    height: 100px;
-    background: #9e9e9e;
+    height: 300px;
+    background: #225992 url(imagens/cabecalho2.jpg) no-repeat center;
     text-align: center;
-    line-height: 100px;
+    line-height: 300px;
 }
 
 #conteudo{
@@ -28,8 +31,6 @@ body{
     float: left;
     padding-top: 20px;
     padding-bottom: 20px;
-    background: #d1d1d1;
-
 }
 
 #rodape{
@@ -57,4 +58,10 @@ body{
     float: right;
     background: #d1d1d1;
     padding: 5px;
+}
+
+img.img-noticia{
+    width: 96%;
+    padding: 2%;
+
 }
