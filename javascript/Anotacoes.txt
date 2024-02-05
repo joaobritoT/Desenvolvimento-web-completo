@@ -1,0 +1,46 @@
+Comentarios em javascript: 
+
+// - comentario em linha
+
+/* */ - comentario em codigo
+
+Vriaveis em js:
+
+String, number, boolean
+
+Declarando uma variavel:
+
+var n1 = 5;
+var nome = "joao"
+var verdadeiro = True;
+var falos = False;
+
+document.write() - escreve um valor na tela
+
+concatenando um elemento na tela: document.write('<h1>Ola ' + nome + '</h1>')
+
+variaveis null e undefined:
+  null: ausencia intencional de um valor
+  undefined: nao possue nenhum valor
+
+estrutura if, else:
+
+if(condicao){
+
+}else{
+
+}
+
+Operadores de comparacao: 
+
+== igual
+==== identico (iguais e do mesmo tipo)
+!= diferente
+!== nao identico (diferentes e de tipos diferentes)
+< menor
+> maior
+<= menor ou igual
+>= maior ou igual
+
+usamos a funcao parseInt, toString ou parseFloat para alterar o tipo da variavel
+
