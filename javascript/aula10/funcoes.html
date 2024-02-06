@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes</title>
+</head>
+<body>
+    
+
+    <script>
+        function calacularAreaTerreno(largura,comprimento){
+            var area = largura * comprimento
+            return area
+        }
+        var largura = parseFloat(prompt("digite a largura do terreno"))
+        var comprimento = parseFloat(prompt("digite o comprimento do terreno"))
+
+        var resultado = calacularAreaTerreno(largura,comprimento)
+        document.write(resultado)
+    </script>
+</body>
+</html>

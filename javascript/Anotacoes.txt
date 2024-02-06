@@ -44,3 +44,53 @@ Operadores de comparacao:
 
 usamos a funcao parseInt, toString ou parseFloat para alterar o tipo da variavel
 
+switch case:
+
+	switch(opcao){
+		case1:
+		   break
+		case2
+		   break	
+}
+
+O switch faz a comparacao com o operador de identico
+
+Operadores aritimeticos:
+
++ adicao
+- subtracao
+* multiplicacao
+/ divisao
+% resto da divisao
+++ incremento
+-- decremento
+
+Fucoes:
+ function calcularAreaTerreno(largura, comprimento){
+	var area = largura * comprimento
+	return area
+}
+
+area_terreno1 = calcularAreaTerreno(1000,1000)
+console.log(area_terreno1)
+
+Escopo de variáveis:
+
+temos 3 escopos: global, funcao e de bloco
+
+variaveis declaradas dentro de uma funcao, pode ser acessada apenas dentro do proprio escopo
+
+Funcao anonima:
+	function(){
+	   console.log("ola, mundo")
+}
+
+podemos associar uma funcao para dentro de uma variavel: 
+
+var teste = function(){
+	   console.log("ola, mundo")
+}
+
+
+
+
