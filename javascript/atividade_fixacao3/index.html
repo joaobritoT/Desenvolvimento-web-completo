@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade fixacao</title>
+</head>
+<body>
+    <script>
+        var n1 = parseInt(prompt("Digite o primeiro numero: "))
+        var n2 = parseInt(prompt("Digite o primeiro numero: "))
+
+        var operacao = (prompt("Digite a operacao (soma ou subtracao) "))
+
+        function soma(n1,n2){
+            return n1+n2
+        }
+        function subtracao(n1,n2){
+            return n1- n2
+        }
+
+        if(operacao == 'soma'){
+            resultado = soma(n1,n2)
+        }
+        else if(operacao == 'subtracao'){
+            resultado = subtracao(n1,n2)
+        }else{
+            resultado = 'comando invalido'
+        }
+
+        document.write(resultado)
+    </script>
+</body>
+</html>

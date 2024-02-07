@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datas</title>
+</head>
+<body>
+    <script>
+        var data = new Date()
+
+    /*
+        //adicionar dias
+        document.write(data.toString())
+        data.setDate(data.getDate() + 1)
+        document.write('<hr/>')
+        document.write(data.toDateString())
+
+        document.write('<hr/>')
+
+         //adicionar meses
+        document.write(data.toString())
+        data.setMonth(data.getMonth() +1)
+        document.write('<hr/>')
+        document.write(data.toDateString())
+
+        document.write('<hr/>')
+
+         //adicionar anos
+        document.write(data.toString())
+        data.setFullYear(data.getFullYear() +1)
+        document.write('<hr/>')
+        document.write(data.toDateString())
+    */
+
+        // quantos dias entre duas datas
+
+        var data1 = new Date(2024,1,7)
+
+        var data2 = new Date(2024,2,4)
+
+        document.write(data1.toString())
+        document.write("<hr/>")
+        document.write(data2.toString())
+
+        //converter para number
+        document.write("<hr/>")
+
+        document.write(data1.getTime())
+        document.write("<hr/>")
+        document.write(data2.getTime())
+
+        //encontrar a quantidade de milisecundos entre data 1 e data 2
+        document.write("<hr/>")
+        document.write(Math.abs(data1.getTime() - data2.getTime()))
+
+        var milisegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        var milisegundos_por_dia = (1*24*60*60*1000) 
+        
+        document.write("1 dia tem " + (1*24*60*60*100) + "milisegundos")
+        document.write("<hr/>")
+        document.write(milisegundos_entre_datas / milisegundos_por_dia)
+
+    
+    </script>
+</body>
+</html>
