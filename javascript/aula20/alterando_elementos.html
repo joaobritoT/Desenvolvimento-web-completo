@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando elementos html</title>
+</head>
+<body>
+    <h3>Manipulando estilo</h3>
+    <br>
+    <button type="button" onclick="modificar('red')">vermelho</button>
+    <button type="button"onclick="modificar('green')">verde</button>
+    <button type="button"onclick="modificar('blue')">azul</button>
+    <hr>
+    <div style="border: solid 1px black; width: 100px; height: 100px;" id="box"></div>
+
+    <script>
+        function modificar(cor){
+            document.getElementById("box").style.background = cor
+            
+        }
+    </script>
+</body>
+</html>

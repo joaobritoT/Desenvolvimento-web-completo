@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capturando_elementos</title>
+
+    
+</head>
+<body>
+    
+    <input type="text" placeholder="digite um caractere aqui" onkeyup="evento()" id="campo">
+    <hr>
+    <span>Letras:</span>
+    <input type="text"disabled="disabled" id="letras">
+    <span>Numeros:</span>
+    <input type="text"disabled="disabled" id="Numeros">
+
+    <script>
+       function evento(){
+        var valor = document.getElementById("campo").value 
+        document.getElementById("campo").value = '' 
+        valor.trim()
+
+        switch(valor){
+            case '0':
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+                campo = document.getElementById("Numeros")
+                campo.value = valor
+                break
+            default:
+                campo = document.getElementById("letras")
+                campo.value = valor
+
+        }
+       }
+    </script>
+</body>
+</html>
