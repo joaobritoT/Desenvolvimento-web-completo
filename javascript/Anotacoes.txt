@@ -91,6 +91,123 @@ var teste = function(){
 	   console.log("ola, mundo")
 }
 
+Funcao de callback:
+
+	Encaminhadas como parametros para outras funcoes:
+
+	 function exibirArtigo(id,callbackSucesso,callbackErro){
+            // recuperar o id via requisicao http
+
+            if(true){
+                sucesso('funcoes de callback em js','Funcoes de callback sao muito utilizadas')
+            }else{
+                erro('Erro')
+            }
+        }
+
+        var sucesso = function(titulo, descricao){
+            document.write('<h1>' + titulo + '</h1>')
+            document.write('<hr />')
+            document.write('<h1>' + descricao + '</h1>')
+        }
+        var erro = function(erro){
+            document.write('<h1>' + erro + '</h1>')
+        }
+        exibirArtigo(1, sucesso,erro)
 
 
+Funcoes nativas para manipular string:
+	lenght = tamando da string
+	string.lenght
 
+	charAt() - retorna o valor do indice passado
+	string.charAt(indice)
+
+	indexOf() - retorna a posicao de um caracter (primeira ocorrencia)
+	string.indexOf('g')
+
+	replace() - substitui elemtos dentrod e uma string
+	string.replace('antigo','novo')
+
+	substr() - extrair parde de uma string atravesd e um valor inicial e final
+	sting.substr(1,6) - comeca no indice 1 e avanca 6 posicoes
+
+	toLowerCase() - converte para minusculo
+	toupperCase() - converte para maiusculo
+
+	trim() - remove espacos em branco
+
+Funcoes nativas para tarefas matematicas:
+
+	Math.ceil(float) - arredonda pra cima
+	Math.floor(float) - arredonda pra baixo
+	Math.round(float) - arredonda de acordo com o valor 
+	Math.random() - fornece um numero aleatorio
+	Math.sqrt(number) - retorna a raiz quadrada
+	
+Fumcoes nativas para manipular datas:
+
+	var data = new Date() - sempre devemos instanciar o objeto date
+
+	as informacoes sao de acordo com o os parametros de data e hora do sistema operacional do	usuario
+
+	data.getDate() - retorna a data atual
+	data.getMonth() + 1 - retorna o mes (0-11)
+	data.getFullYear() - retorna o ano atual
+	
+	Existem diversos outros metodos dentro do objeto date.
+
+
+Eventos: 
+	capturar acoes que sao feitos pelos usuarios dentro do navegador
+	
+	mouse:
+	  onlick - quando elemento eh clicado
+	  ondblclick - quando elemento eh clicado 2 vezes
+	  onmouseup - quando o clique sobre um elemento e liberado
+	  onmouseover - quando passa o mouse pelo elemento
+	  onmouseout - quandos sai do elemetno com o mouse
+	
+
+	podemos adicionar mais de uma acao dentro de um elemento html
+
+	Teclado: 
+	  onkeydown - quando a tecla eh pressionada
+	  onekeyup - quando a tecla eh liberada
+	  onekeypress - quando mantem a tecla pressionada
+
+	Janela:
+	  onresize - acionado quando a pagina e redimensionada
+	  onscroll - quando usamos o scroll do mouse
+	
+	Formulario:
+	  onfocus - quando o elemento recebe o foco do cursor do mouse
+	  onbluor - quando o elemento perder o foco
+	  onchange - quando o elemento e modificado
+
+DOM:
+	
+   Document Object Model
+   Fornece metodos para selecionar elementos html
+   
+   Metodos para capturar elementos: 
+	getElementById()
+	getElementsByTagName()
+	getElementsByClassName()
+	getElementsByName()
+
+	para setar um atibuto de estilo atraves do javascript:
+
+	document.getElementById("elemento").style.atributos
+	em js, usamos o padrao cammelcase para atributos css
+
+	para setar classes a elementos html:
+	document.getElementById('elemento').className = 'nome da classe a ser aplicada'
+
+   
+   interpretar string para funcao javascript: eval(string)
+
+Array:
+    var lista = Array() ou var lista = []
+	
+	
