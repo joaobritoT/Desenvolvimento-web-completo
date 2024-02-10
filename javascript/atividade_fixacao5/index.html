@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade fixacao 5</title>
+</head>
+<body>
+    <input type="text" placeholder="nome do elemento" id="campo">
+    <button type="button" onclick="Adiconar()">Adiconar</button>
+    <button type="button" onclick="Ordenar()">Ordenar</button>
+
+
+    <script>
+        var lista = Array()
+        function Adiconar(){
+            valor_campo = document.getElementById("campo").value
+            if(valor_campo ==''){
+                alert("informe um valor valido")
+            }else if(lista.indexOf(valor_campo) != -1){
+                alert("valor ja inserido")
+                document.getElementById("campo").value = ''
+            }else{
+                lista.push(valor_campo)
+                console.log(lista)
+                document.getElementById("campo").value = ''
+            }
+        }
+
+        function Ordenar(){
+            console.log(`lista ordenada alfabeticamente: ${lista.sort()}`)
+        }
+    </script>
+
+</body>
+</html>
