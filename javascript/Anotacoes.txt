@@ -209,5 +209,56 @@ DOM:
 
 Array:
     var lista = Array() ou var lista = []
+
+Array multidimensional:
+    	var listas = Array()
+        listas['frutas'] = Array('banana','maca')
+        listas['pessoas'] = Array("joao",'pedro')
+        console.log(listas)
+	desta maneira, podemos manipular parecido com um dicionario do python:
+	console.log(listas['pessoas'][0])
+
+Metodos de inclusao nos arrays: 
+        var lista_frutas = Array('banana','maca')
+        
+        incluir elemto no final do array:
+        lista_frutas.push("uva")
 	
+	incluir elemento no inicio do array:
+        lista_frutas.unshift('pera')
+
+	excluir elemento no final do array:
+        lista_frutas.pop()
+
+        excluir elemento no comeco do array:
+        lista_frutas.shift()
+
+Metodos de pesquisa array:
+	Usamos o metodo indexof: 
+
+	var lista_frutas = Array('banana','maca','pera','uva')
+
+        console.log(lista_frutas.indexOf('uva'))
+
+	Se o elemto nao existir, o retorno vai ser -1
+
+Ordenacao de array: 
+	var lista_frutas = Array('banana','maca','pera','uva')
+
+       	console.log(lista_frutas.sort()) - ordena alfanumericamente
+
+
+	console.log(lista_numeros.sort(ordenaNumeros)) - ordena numericamente
+
+       function ordenaNumeros(a,b){
+        return a - b
+       }
+
+Estrutura de repeticao:
+	While:
+	
+	while(condicao){
+	    codigo
+       }
+
 	
