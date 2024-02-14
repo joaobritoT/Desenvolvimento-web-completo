@@ -261,4 +261,48 @@ Estrutura de repeticao:
 	    codigo
        }
 
+       do while:
+
+	do{
+
+	   codigo
+
+	}while(condicao)
+
+
+	for:	
+
+	for(variavel;condicao;controle;){
+
+	    codigo
+
+	}
+
+
+	percorrendo um array com for:
+	var lista_frutas = Array('banana','maca','pera','uva')
+
+       for(var elementos in lista_frutas){
+        document.write(lista_frutas[elementos] + "<br/>")
+       }
+
+
+       Tabuadas com for: 
+
+	for(y=1;y<=10;y++){
+
+        for(x=1;x<=10;x++){
+            document.write(`${y} x ${x} = ${y*x}` + "<br/>")
+        }
+        document.write("<hr/>")
+       } 
+
+
+       foreach em javascript: 
+
+	var lista_funcionarios = ['pedro','ana','miguel','carlos','pedro']
+
+        lista_funcionarios.forEach(function(valor,indice,array){
+            console.log(valor)
+        });
 	

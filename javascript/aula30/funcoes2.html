@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura while</title>
+</head>
+<body>
+    <script>
+        function soma(){
+            var resultado = 0
+            for(i in arguments){
+                resultado += arguments[i]
+            }
+            console.log(resultado)
+        }
+
+        console.log(soma(5,4,10,6))
+    </script>
+</body>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom</title>
+</head>
+<body>
+    <button type="button" onclick="abrir()">Abrir janela</button>
+    <button type="button" onclick="fechar()">Fechar janela</button>
+    <button type="button"onclick="vertamanho()">Ver tamanho</button>
+    <script>
+        var janela
+        function abrir(){
+           janela =  window.open()
+        }
+        function fechar(){
+            janela.close()
+        }
+        function vertamanho(){
+            largura = window.screen.width
+            altura = window.screen.height
+            console.log(largura,altura)
+        }
+    </script>
+</body>
