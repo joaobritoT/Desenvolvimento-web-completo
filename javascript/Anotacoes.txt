@@ -305,4 +305,57 @@ Estrutura de repeticao:
         lista_funcionarios.forEach(function(valor,indice,array){
             console.log(valor)
         });
+
+
+	Parametros de funcoes:
+	Podemos utilizar do objeto arguments dentro de uma funcao para declarara quantos
+	parametros necessarios:
+
+	function soma(){
+            var resultado = 0
+            for(i in arguments){
+                resultado += arguments[i]
+            }
+            console.log(resultado)
+        }
+
+        console.log(soma(5,4,10,6))
+
 	
+	Tratamentos de erro:
+
+	var video = Array()
+        video[1] = Array()
+        video[1]['nome'] = 'breaking bad'
+        video[1]['categoria'] = 'drama'
+
+        function getvideo(video){
+            try{
+                console.log[0]['nome']
+            }
+            catch{
+                console.log("erro")
+            }
+            
+            finally{
+                console.log("sempre aqui")
+            }
+        }
+
+	Sequencia - tenta, se nao coseguir: executa o o catch e depois o finally
+
+	Browser Object Model:
+
+	API que permite o acesso via Javascript a recursos do browser
+
+	elemento window - janela do navegador - window.open()
+	elemto screen - tela do browser, podemos ter acesso a largura x altura
+	location - Window.location - atributos e metos da url atual
+	timing - setTimeout (<acao>,<tempo em milisegundos>) - executa uma acao uma vez apos o tempo 	informado
+	setInterval - Sempre executada apos o periodo informado
+
+
+	Criando um elemento e adicionado no html diretamente com js:
+
+	var mosquito = document.createElement('img')
+	document.body.appendChild(mosquito)
