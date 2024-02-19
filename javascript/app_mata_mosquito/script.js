@@ -2,6 +2,21 @@
 var altura = 0
 var largura = 0
 var vidas = 1
+var tempo = 20
+
+var criaMoscaTempo = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?','')
+
+
+if(nivel === 'normal'){
+    criaMoscaTempo = 1500
+}else if (nivel === 'dificil'){
+    criaMoscaTempo = 1000
+}else if(nivel === 'extremo'){
+    criaMoscaTempo = 750
+}
 function ajusta_tamanho(){
     altura = window.innerHeight
     largura = window.innerWidth
@@ -9,6 +24,18 @@ function ajusta_tamanho(){
 }
 
 ajusta_tamanho()
+var cronometro = setInterval(function(){
+    tempo-=1
+    if(tempo<0){
+        clearInterval(cronometro)
+        clearInterval(criaMosca)
+        window.location.href = 'vitoria.html'
+    }else{
+        document.getElementById("cronometro").innerHTML = tempo
+    }
+    
+    
+},1000)
 
 function posicao(){
 
