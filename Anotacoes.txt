@@ -359,3 +359,64 @@ Estrutura de repeticao:
 
 	var mosquito = document.createElement('img')
 	document.body.appendChild(mosquito)
+
+	Podemos utilizar a funcao clearinterval para limpar um determinado intervalo de tempo
+
+
+	ECMAScript:
+	
+	- Versao da linguagem javascript
+	- Diversas features
+	
+	var e let
+
+	let: declaracao de uma variavael, ele preserva o escopo onde foi declarada
+	variaveis delcaradas como let podem ser acessadas apenas no escopo que foram declaradas
+	
+	Exemplo: 
+
+	let serie = 'breaking bad'
+
+       {
+        let serie = 'the walking dead'
+        console.log('dentro do bloco: ' + serie)
+       }
+       console.log("fora do bloco: "+ serie)
+
+	Const: declaracao de uma variavel para constantes, nao sofre alteracao de valor durante o 	processamento do script, exemplo: numero de PI, constantes sao declaradas com caracteres maiusculos
+
+	const PI = "3.1415......"
+
+	Template strings: usamos para formatacao de frases (interpolacao)
+	Exemplo:
+	
+	var nome = 'joao'
+
+        console.log(`ola ${nome}, tudo bem?`)
+
+	Parametros default para funcoes: Declaramos os valores na declaracao da variave, se outros
+					 parametros forem declaradaos na chamada da funcao, os valores
+					 mudam
+
+	exemplo: 
+
+	function contarHistoria(personagem = 'fuba',acao = 'latir',dono='joao'){
+            document.write(`era uma vez, um cachorro chamado ${personagem}, ele gostava de ${acao}, seu 	    dono era ${dono}`)
+        }
+        contarHistoria()
+
+	
+	Arrow functions: 
+
+	Escrita de funcoes anonimas
+	Exemplo: 
+
+	let quadrado = (x) => {
+            return x * x
+        }
+
+	ou 
+
+	let quadrado = x => x*x
+	
+	
