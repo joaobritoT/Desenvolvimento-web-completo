@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        class ContaBancaria{
+            constructor(){
+                this.agencia = 1075
+                this.numeroConta = 8351125
+                this.saldo = 50
+                this.limite = 450
+            }
+            depositar(valor_deposito){
+                if(valor_deposito > 0){
+                    this.saldo += valor_deposito
+                }
+            }
+            sacar(valor_saque){
+                if(valor_saque <= this.saldo){
+                    this.saldo -= valor_saque
+                }
+            }
+            consultarSaldo(){
+                return this.saldo
+            }
+        }
+
+        let conta1 = new ContaBancaria()
+
+        conta1.consultarSaldo()
+        conta1.depositar(50)
+        conta1.sacar(10)
+    </script>
+</body>
+</html>
