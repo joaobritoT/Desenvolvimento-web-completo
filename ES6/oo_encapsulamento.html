@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulamento</title>
+</head>
+<body>
+    <script>
+        class Tv{
+            constructor(){
+                this._canais = Array(2,4,5,7,10)
+                this._canalAtivo = 5
+                this._volume = 5
+            }
+            get canalAtivo(){
+                return this._canalAtivo
+            }
+
+        }
+
+        var tv = new Tv()
+        console.log(tv.canalAtivo)
+        
+    </script>
+</body>
+</html>

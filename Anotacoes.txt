@@ -418,5 +418,48 @@ Estrutura de repeticao:
 	ou 
 
 	let quadrado = x => x*x
+
+
+	Orientacao a objetos:
+
+		Criando um objeto e js:
+
+		Class Calculadora {
+
+		constructor(){
+
+			this.a = 10
+			this.b = 7
+			this.operador = 'mult'
+		}
+
+		calcular(){
+
+			if (this.operador === 'multi'){
+				this.a * this.b
+			}
+		}
+	}
+
+	calculadora = new Calculadora()
+	calculadora.calcular()
+
+	Encapsulamento: Forma de dar visibilidade a um atributo ou metodo, um metodo pode ser privado ou 			publico
+	
+	class Tv{
+            constructor(){
+                this._canais = Array(2,4,5,7,10)
+                this._canalAtivo = 5
+                this._volume = 5
+            }
+            get canalAtivo(){
+                return this._canalAtivo
+            }
+
+        }
+
+        var tv = new Tv()
+        console.log(tv.canalAtivo)
+	
 	
 	
