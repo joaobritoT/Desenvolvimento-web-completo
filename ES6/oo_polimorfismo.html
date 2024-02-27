@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polimorfismo</title>
+</head>
+<body>
+    <script>
+
+        class Animal{
+            constructor(cor,tamanho){
+                this.cor = cor
+                this.tamanho = tamanho
+            }
+
+            dormir(){
+                console.log("dormiu")
+            }
+        }
+
+
+        class Passaro extends Animal{
+            constructor(bico){
+                super("verde",25)
+                this.bico = bico
+            }
+
+            voar(){
+                console.log("voou")
+            }
+          
+        }
+
+        class Papagaio extends Passaro{
+            constructor(sabeFalar){
+                super('medio')
+                this.sabeFalar = sabeFalar
+            }
+            falar(){
+                console.log("falou")
+            }
+        }
+
+        class Avestruz extends Passaro{
+            constructor(){
+                super('branco','grande',100)
+            }
+            enterrar_cabeca(){
+                console.log("enterrou a cabeca")
+            }
+            voar(){
+                console.log("nao voa")
+            }
+        }
+
+        let papagaio = new Papagaio(true)
+
+        Passaro.dormir()
+        Papagaio.voar()
+    </script>
+</body>
+</html>

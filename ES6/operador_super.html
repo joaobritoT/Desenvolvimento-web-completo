@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador super</title>
+</head>
+<body>
+    <script>
+
+        class Animal{
+            constructor(cor,tamanho){
+                this.cor = cor
+                this.tamanho = tamanho
+            }
+
+            dormir(){
+                console.log("dormiu")
+            }
+        }
+
+
+        class Passaro extends Animal{
+            constructor(bico){
+                super("verde",25)
+                this.bico = bico
+            }
+
+            voar(){
+                console.log("voou")
+            }
+          
+        }
+
+        class Papagaio extends Passaro{
+            constructor(sabeFalar){
+                super('medio')
+                this.sabeFalar = sabeFalar
+            }
+            falar(){
+                console.log("falou")
+            }
+        }
+
+        let papagaio = new Papagaio(true)
+
+        Passaro.dormir()
+        Papagaio.voar()
+    </script>
+</body>
+</html>
