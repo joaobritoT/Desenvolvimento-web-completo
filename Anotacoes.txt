@@ -460,6 +460,75 @@ Estrutura de repeticao:
 
         var tv = new Tv()
         console.log(tv.canalAtivo)
+
+	Herancao em js:
+
+
+	class Animal{
+            constructor(){
+                this.cor = ''
+                this.tamanho = null
+            }
+
+            dormir(){
+                console.log("dormiu")
+            }
+        }
+
+
+
+        class Cachorro extends Animal{
+            constructor(){
+                super()
+                this.cor = "branco"
+                this.orelhas = "Grandes e caidas"
+            }
+            correr(){
+                console.log("correu")
+            }
+
+            rosnar(){
+                console.log("rosnou")
+            }
+        }
+
+	Para a classe filha herdar atributos e metodos da classe pai, precisa usar o metodo super()
+	em seu construtor
+
 	
+	Objeto lietral: Objeto descrito dentro da classe:
+
 	
+	let produto_literal = {
+            descricao: 'notebook',
+            preco: 1500,
+            ver_desc: function(){
+                console.log(`${this.descricao} por apenas ${this.preco}`)
+            }
+        }
+	
+
+	objetos a partir de funcoes: 
+
+	let Carro = function(){
+            this.cor = "azul"
+            this.modelo = "onix"
+            this.ano = "2020"
+            this.velocidade_atual = 0
+
+            this.acelerar = function(){
+                let velocidade = this.getVelocidadeAtual() + 10
+                this.setVelocidadeAtual(velocidade)
+            }
+
+            this.getVelocidadeAtual = function(){
+                return this.velocidade_atual
+            }
+
+            this.setVelocidadeAtual = function(velocidade){
+                this.velocidade_atual = velocidade
+            }
+        }
+
+	let carro = new Carro()
 	

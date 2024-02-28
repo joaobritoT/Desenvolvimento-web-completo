@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto literal</title>
+</head>
+<body>
+    <script>
+        let assinatura = {
+            id: 1000,
+            desc: "acesso a internet",
+            status: function(){
+                console.log("ativo")
+            }
+        }
+
+        let y = assinatura
+        console.log(y.desc)
+    </script>
+</body>
+</html>

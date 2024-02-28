@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funcao construtora</title>
+</head>
+<body>
+    <script>
+        let Carro = function(){
+            this.cor = "azul"
+            this.modelo = "onix"
+            this.ano = "2020"
+            this.velocidade_atual = 0
+
+            this.acelerar = function(){
+                let velocidade = this.getVelocidadeAtual() + 10
+                this.setVelocidadeAtual(velocidade)
+            }
+
+            this.getVelocidadeAtual = function(){
+                return this.velocidade_atual
+            }
+
+            this.setVelocidadeAtual = function(velocidade){
+                this.velocidade_atual = velocidade
+            }
+        }
+        let carro = new Carro()
+    </script>
+</body>
+</html>
