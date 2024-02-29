@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+
+        let a1 = {
+            cor: 'branco',
+            modelo: 'air bus a380',
+            levantar_voo(){
+                console.log("decolou")
+            }
+        }
+        let aviaoF = function(){
+            this.cor = 'azul',
+            this.modelo = 'boeing 787',
+            this.levantar_voo = function(){
+                console.log("decolou")
+            }
+        }
+
+        let a2 = new aviaoF()
+
+        class aviaoC{
+            constructor(){
+                this.cor = 'vermelho',
+                this.modelo = 'Embraer E-Jets'
+            }
+            levantar_voo(){
+                console.log("decolou")
+            }
+        }
+
+        let a3 = new aviaoF()
+    </script>
+</body>
+</html>

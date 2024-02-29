@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funcao construtora</title>
+</head>
+<body>
+    <script>
+        let Carro = function(){
+            this.cor = "azul"
+            this.modelo = "onix"
+            this.ano = "2020"
+            this.velocidade_atual = 0
+            let velocidade_maxima = 180
+            let km_rodados = 0
+
+            this.acelerar = function(){
+                let velocidade = this.getVelocidadeAtual() + 50
+                if(velocidade > velocidade_maxima){
+                    velocidade = velocidade_maxima
+                }
+                this.setVelocidadeAtual(velocidade)
+                set_km_rodados(0.07)
+                
+            }
+
+            this.getVelocidadeAtual = function(){
+                return this.velocidade_atual
+            }
+
+            this.setVelocidadeAtual = function(velocidade){
+                this.velocidade_atual = velocidade
+            }
+
+            let set_km_rodados = function(k){
+                km_rodados += k
+            }
+        }
+        let carro = new Carro()
+    </script>
+</body>
+</html>
