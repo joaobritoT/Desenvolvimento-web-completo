@@ -531,4 +531,21 @@ Estrutura de repeticao:
         }
 
 	let carro = new Carro()
+
+	Para encapsular um atributo dentro de uma funcao construtora, declaramos sem o this
+
+
+	Utilizando conceito de factory para criar uma objeto: 
+
+	let bicicleta_factory = function(){
+            return {
+                cor: 'branca',
+                marcha: 'unica',
+                aro: 12,
+                pedalar(){
+                    console.log("pedalou")
+                }
+            }
+        }
+        let bicicleta2 = bicicleta_factory()
 	

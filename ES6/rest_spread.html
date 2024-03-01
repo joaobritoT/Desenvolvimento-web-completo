@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador rest_spread</title>
+</head>
+<body>
+    <script>
+        //spread 
+
+        let titutloArtigo = "como utilizxar o operador rest/spread"
+        console.log(titutloArtigo)
+        console.log(...titutloArtigo)
+
+        // objeto
+
+        let pessoa = {
+            nome:"joao",
+            idade: 27
+        }
+
+        let clone = {
+            endereco:"rua abc",
+            ...pessoa
+        }
+    </script>
+</body>
+</html>
