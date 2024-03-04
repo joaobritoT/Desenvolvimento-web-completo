@@ -548,4 +548,53 @@ Estrutura de repeticao:
             }
         }
         let bicicleta2 = bicicleta_factory()
+
+	Operador spread - espalhar estruturas de dados: 
+
+	let titutloArtigo = "como utilizxar o operador rest/spread"
+        console.log(titutloArtigo)
+        console.log(...titutloArtigo)
+
+        // objeto
+
+        let pessoa = {
+            nome:"joao",
+            idade: 27
+        }
+
+        let clone = {
+            endereco:"rua abc",
+            ...pessoa
+        }
+
+	Operador rest - juntar estruturas de dados: 
+
+	function soma(...param){
+            let resultado = 0
+            param.forEach(v => resultado+= v)
+            return resultado
+        }
+
+        soma(3,4,5,6)
+
+	Utilizando operador destructuring para extrair dados de um array:
+
+	let frutas = ['banana','maca','uva','pera','mamao']
+
+        let [a,b] = frutas
+
+	para um objeto:
+	
+	let produto = {
+            desc:'notebook',
+            preco: 1500,
+            detalhes:{
+                fabricante:"abc",
+                modelo:"xyz"
+            }
+        }
+
+        let {desc,preco} = produto
+        console.log(desc,preco)
+	let{detalhes:{fabricante,modelo}} = produto
 	
