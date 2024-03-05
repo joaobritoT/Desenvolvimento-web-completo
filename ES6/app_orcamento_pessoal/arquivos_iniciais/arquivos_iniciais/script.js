@@ -7,6 +7,14 @@ class Despesa{
         this.descricao = descricao 
         this.valor = valor
     }
+    validarDados(){
+        for(let i in this){
+            if(this[i] == null || this[i] == undefined || this[i] == ''){
+                return false
+            }
+        }
+        return true
+    }
 }
 
 class Bd{
@@ -40,8 +48,16 @@ function cadastrarDespesa(){
     let valor = document.getElementById("valor").value
 
     let despesa = new Despesa(ano,mes,dia,tipo,descricao,valor)
-    console.log(despesa)
-    bd.gravar(despesa)
+    
+    validacao = despesa.validarDados()
+    if(validacao == true){
+        bd.gravar(despesa)
+        $("#sucessoGravacao").modal('show')
+    }
+    else{
+        $("#erroGravacao").modal('show')
+    }
+    
 
 }
 
