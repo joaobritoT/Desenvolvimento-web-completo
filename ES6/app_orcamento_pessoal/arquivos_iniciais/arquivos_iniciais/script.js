@@ -35,6 +35,19 @@ class Bd{
         localStorage.setItem(id,JSON.stringify(d))
         localStorage.setItem('id',id)
     }
+    carregarDados(){
+
+       let despesas = Array()
+       let id = localStorage.getItem('id')
+       for(let i =1; i<=id; i++){
+        let despesa = JSON.parse(localStorage.getItem(i))
+        if(despesa === null){
+            continue
+        }
+        despesas.push(despesa)
+       }
+       return despesas
+    }
 }
 
 let bd = new Bd
@@ -52,12 +65,44 @@ function cadastrarDespesa(){
     validacao = despesa.validarDados()
     if(validacao == true){
         bd.gravar(despesa)
-        $("#sucessoGravacao").modal('show')
+        document.getElementById("motal_titulo").innerHTML = "registro inserido"
+        document.getElementById("conteudo").innerHTML = "registro inserido com sucesso"
+
+        $("#registraDespesa").modal('show')
     }
     else{
-        $("#erroGravacao").modal('show')
+        document.getElementById("motal_titulo").innerHTML = "falha ao inserir registro"
+        document.getElementById("conteudo").innerHTML = "Cheque os dados e tente novamente"
+        $("#registraDespesa").modal('show')
     }
     
 
+}
+
+function carregaListaDespesa(){
+    let despesas = Array()
+    despesas = bd.carregarDados()
+    let lista = document.getElementById("listadespesa")
+    despesas.forEach(function(d){
+        let linha = lista.insertRow()
+        linha.insertCell(0).innerHTML = `${d.dia}/${d.mes}/${d.ano}`
+
+        switch(d.tipo){
+            case '1' : d.tipo ='Alimentacao'
+                break
+            case '2' : d.tipo ='Educacao'
+                break
+            case '3' : d.tipo ='Lazer'
+                break
+            case '4' : d.tipo ='Saude'
+                break
+            case '5' : d.tipo ='Transporte'
+                break
+        }
+
+        linha.insertCell(1).innerHTML = d.tipo
+        linha.insertCell(2).innerHTML = d.descricao
+        linha.insertCell(3).innerHTML = d.valor
+    })
 }
 
